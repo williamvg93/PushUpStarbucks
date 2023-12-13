@@ -6,7 +6,6 @@
 }
 
 :root {
-  /* --fontziseNavLinks: 1.3rem; */
   --fontziseNavLinks: clamp(1.1rem, 1.7vw, 1.4rem);
   --fontziseNavLinksRes: clamp(1.5rem, 4vw, 1.8rem);
   --colorNavLinks: #087f5b;
@@ -19,6 +18,9 @@
   --colorMainBlue: #1971c2;
   --colorMainOrange: #f08c00;
   --colorLogoFace: #4267b2;
+  --colorSvgBlue: invert(38%) sepia(27%) saturate(2473%) hue-rotate(177deg) brightness(94%) contrast(93%);
+  --colorSvgGreen: invert(21%) sepia(93%) saturate(5156%) hue-rotate(161deg) brightness(95%) contrast(94%);
+  --colorSvgOrange: invert(63%) sepia(91%) saturate(3183%) hue-rotate(6deg) brightness(99%) contrast(103%);
 }
 
 * {
@@ -32,19 +34,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid chocolate;
 }
 
 .contNav {
   width: 90%;
   height: 13vh;
-  border: 1px solid blue;
 }
 
 .contMain {
   width: 90%;
   height: 86.5vh;
-  border: 1px solid darkorchid;
 }
 
 /* ----- Navigation Styles ----- */
@@ -56,7 +55,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid green;
   --state-close: scale(0);
   --state-hamburger: scale(1);
   --state-menu: translate(-100%);
@@ -73,7 +71,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 
 .contNav nav .contMenuLogo {
@@ -87,7 +84,6 @@
 }
 
 .contNav nav .contItensMenu {
-  border: 1px solid red;
   width: 99%;
   height: 86.5vh;
   background-color: white;
@@ -111,6 +107,7 @@
   grid-column: -2/-1;
   grid-row: 1/2;
   transition: 0.3s transform;
+  filter: var(--colorSvgGreen);
 }
 
 .contNav nav .contMenuLogo .navHam img,
@@ -151,21 +148,19 @@
 .contMain {
   display: grid;
   position: relative;
-  /* grid-template-columns: minmax(min(100%, 600px), 1fr) minmax(min(100%, 40%), .8fr); */
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 472px), 1fr));
   align-items: center;
   justify-items: center;
   width: 90%;
-  /* grid-template-columns: 2fr 1fr; */
 }
 
 .contMain .contSectionInfo {
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   width: 90%;
+  margin-top: -25vh;
   align-items: center;
-  color: var(--colorMainBlue);
+  color: var(--colorMainGreen);
 }
 
 .contMain .contSectionInfo .contSecInfoTitle,
@@ -189,7 +184,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid violet;
   width: 90%;
   height: 90%;
 }
@@ -197,7 +191,6 @@
 .contMain .contSectionImg .contImg {
   width: 90%;
   height: 90%;
-  border: 1px solid chocolate;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,16 +204,16 @@
 
 .carrusel1,
 .carruselAside {
-  border: 1px solid red;
   display: flex;
   gap: 2rem;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.018);
+  padding: .5rem 1rem;
+  border-radius: 20px;
 }
 
 .carrusel1 .contImgCarr,
 .carruselAside .contImgCarr {
-  border: 1px solid green;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,6 +250,8 @@
 
 
 
+/* Querys */
+
 
 @media (min-width: 950px) {
   .contNav nav .contLogo {
@@ -277,7 +272,7 @@
     align-items: center;
     justify-content: space-between;
     gap: clamp(0.9rem, 7vw, 7vw);
-    border: 1px solid chartreuse;
+
   }
 
   .contNav nav .contItensMenu {
@@ -314,6 +309,7 @@ main {
 }
 
 .contMain .contSectionInfo {
+  margin-top: 0;
   max-height: 30vh;
   justify-content: start;
   width: 95%;

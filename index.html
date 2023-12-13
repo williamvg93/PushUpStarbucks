@@ -15,7 +15,7 @@
             <a class="navHam" href="#nav">
               <img src="./img/hamburger.svg" alt="" />
             </a>
-            <a class="navClo" href="#">
+            <a class="navClo mainInfo" href="#">
               <img src="./img/close.svg" alt="" />
             </a>
           </div>
@@ -23,10 +23,10 @@
             <img src="./img/logo.png" alt="" />
           </div>
           <ul class="contItensMenu">
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Novedades</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a class="mainInfo" href="#">Inicio</a></li>
+              <li><a class="mainInfo" href="https://www.starbucks.com.co/menu">Menu</a></li>
+              <li><a class="mainInfo" href="https://www.starbucks.com.co/seccion/novedades">Novedades</a></li>
+              <li><a class="mainInfo" href="https://www.starbucks.com.co/stores">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -35,10 +35,10 @@
       <div class="contMain">
         <div class="contSectionInfo">
           <div class="contSecInfoTitle">
-            <h2>StarrBucks</h2>
+            <h2 id="mainTitle" class="mainInfo">StarBucks</h2>
           </div>
           <div class="contSecInfoDesc">
-            <p>
+            <p id="mainDesc" class="mainInfo">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa,
               odio, tempora id perspiciatis magni nulla repudiandae ipsum enim,
               reprehenderit aspernatur atque nihil culpa velit amet dolore ut ex
@@ -48,30 +48,36 @@
         </div>
         <div class="contSectionImg">
           <div class="contImg">
-            <img id="mainImg" src="./img/img2.png" alt="" />
+            <img id="mainImg" src="./img/img1.png" alt="" />
           </div>
         </div>
       </div>
       <div class="carrusel1">
         <div class="contImgCarr">
-          <img src="./img/thumb1.png" alt="" />
+          <img class="btn-carru" value="carr1" src="./img/thumb1.png" alt="" />
         </div>
         <div class="contImgCarr">
-          <img src="./img/thumb2.png" alt="" />
+          <img class="btn-carru" value="carr2" src="./img/thumb2.png" alt="" />
         </div>
         <div class="contImgCarr">
-          <img src="./img/thumb3.png" alt="" />
+          <img class="btn-carru" value="carr3" src="./img/thumb3.png" alt="" />
         </div>
       </div>
       <div class="carruselAside">
         <div class="contImgCarr">
-          <img class="logoFace" src="./img/face.svg" alt="" />
+          <a href="https://www.facebook.com/StarbucksColombia/?locale=es_LA">
+            <img class="logoFace" src="./img/face.svg" alt="" />
+          </a>
         </div>
         <div class="contImgCarr">
-          <img class="logoTwit" src="./img/twit.svg" alt="" />
+          <a href="https://twitter.com/Starbucks">
+            <img class="logoTwit" src="./img/twit.svg" alt="" />
+          </a>
         </div>
         <div class="contImgCarr">
-          <img class="logoInst" src="./img/insta.svg" alt="" />
+          <a href="https://www.instagram.com/starbuckscol/?hl=es">
+            <img class="logoInst" src="./img/insta.svg" alt="" />
+          </a>
         </div>
       </div>
     </main>
