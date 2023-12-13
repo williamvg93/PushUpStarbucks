@@ -5,10 +5,192 @@
     font-style: normal;
 }
 
+:root {
+    /* --fontziseNavLinks: 1.3rem; */
+    --fontziseNavLinks: clamp(1.1rem, 1.5vw, 1.4rem);
+    --colorNavLinks: #087f5b;
+    --colorNavLinksFocus: #00885f;
+    --fontziseMainTitle: clamp(3rem, 5vw, 5rem);
+    --fontziseMainDescr: clamp(1.2rem, 1.8vw, 2.5rem);
+    --colorMainGreen: #087f5b;
+    --colorMainBlue: #1971c2;
+    --colorMainOrange: #f08c00;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins";
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid chocolate;
+}
+
+.contNav {
+    width: 90%;
+    height: 13vh;
+    border: 1px solid blue;
+}
+
+.contMain {
+    width: 90%;
+    height: 86.5vh;
+    border: 1px solid darkorchid;
+}
+
+
+/* ----- Navigation Styles ----- */
+
+.contNav nav {
+    display: flex;
+    height: 100%;
+    padding: 0.8rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid green;
+}
+
+.contNav nav .contLogo
+{
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.contNav nav .contLogo img {
+    width: 100%;
+}
+
+.contNav nav .contItensMenu {
+    display: flex;
+    border: 1px solid red;
+    align-items: center;
+}
+
+.contNav nav .contItensMenu ul {
+    display: flex;
+    /* gap: 7rem; */
+    gap: clamp(0.9rem, 7vw, 7vw);
+    border: 1px solid chartreuse;
+}
+
+.contNav nav .contItensMenu ul li {
+    list-style: none;
+}
+
+.contNav nav .contItensMenu ul li a {
+    text-decoration: none;
+    font-size: var(--fontziseNavLinks);
+    color: var(--colorNavLinks);
+    font-weight: 500;
+}
+
+.contNav nav .contItensMenu ul li a:hover {
+    color: var(--colorNavLinksFocus);
+    font-weight: 600;
+}
+
+/* ----- End Navigation Styles ----- */
+
+
+/* ----- Main Styles ----- */
+
+.contMain {
+    display: grid;
+    position: relative;
+    /* grid-template-columns: minmax(min(100%, 600px), 1fr) minmax(min(100%, 40%), .8fr); */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr)); 
+    align-items: center;
+    justify-items: center;
+    width: 90%;
+    /* grid-template-columns: 2fr 1fr; */
+}
+
+.contMain .contSectionInfo {
+    
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    color: var(--colorMainBlue);
+}
+
+.contMain .contSectionInfo .contSecInfoTitle, .contMain .contSectionInfo .contSecInfoDesc {
+    width: 80%;
+}
+
+.contMain .contSectionInfo .contSecInfoTitle{
+    margin-bottom: 5rem;
+}
+
+.contMain .contSectionInfo .contSecInfoTitle h2 {
+    font-size: var(--fontziseMainTitle);
+}
+
+.contMain .contSectionInfo .contSecInfoDesc p {
+    font-size: var(--fontziseMainDescr);
+}
+
+.contMain .contSectionImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid violet;
+    width: 90%;
+    height: 90%;
+}
+
+.contMain .contSectionImg .contImg {
+    width: 90%;
+    height: 90%;
+    border: 1px solid chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contMain .contSectionImg .contImg img {
+    max-width: 500px;
+    width: 25vw;
+    object-fit: contain;
+}
+
+
+.carrusel1, .carruselAside {
+    border: 1px solid red;
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+.carrusel1 .contImgCarr, .carruselAside .contImgCarr  {
+    border: 1px solid green;
+}
+.carrusel1 .contImgCarr img,.carruselAside .contImgCarr img {
+    max-width: 60px;
+}
+
+.carrusel1 .contImgCarr img,.carruselAside .contImgCarr img:hover {
+    cursor: pointer;
+}
+
+.carrusel1 {
+    bottom:  15px;
+}
+
+.carruselAside {
+    right: 6%;
+    flex-direction: column;
 }
 
